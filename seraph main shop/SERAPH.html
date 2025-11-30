@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERAPH</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:white;
+            color:black
+        }
+
+        .side-nav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            border-right: 1px solid #ddd;
+            z-index: 1000;
+        }
+
+        .side-nav a {
+            display: block;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #000;
+            border-bottom: 1px solid #eee;
+            transition: 0.2s;
+        }
+
+        .side-nav a:hover {
+            background-color: #f4f4f4;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .topbar{
+            background-color:rgb(190, 190, 190);
+            text-align:center;
+            padding:5px;
+            font-size:13px
+        }
+
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 30px;
+            border-bottom:1px solid #ddd
+        }
+
+        .menu{
+            font-size:20px;
+            cursor:pointer
+        }
+
+        .logo{
+            font-weight:bold;
+            font-size:22px;
+            border:1px solid rgb(255, 255, 255);
+            padding:4px 10px
+        }
+
+        .icons{
+            display:flex;
+            gap:15px;
+            font-size:18px
+        }
+
+        .icons a{
+            text-decoration:none;
+            color:inherit;
+            cursor:pointer;
+            transition: opacity 0.2s;
+        }
+
+        .icons a:hover{
+            opacity: 0.7;
+        }
+
+        .main-nav{
+            display:flex;
+            justify-content:center;
+            gap:40px;
+            padding:20px;
+            background-color:#f9f9f9;
+            border-bottom:1px solid #ddd;
+            flex-wrap:wrap
+        }
+
+        .main-nav a{
+            text-decoration:none;
+            color:#000;
+            font-size:14px;
+            font-weight:500;
+            letter-spacing:1px;
+            padding:8px 16px;
+            border:1px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .main-nav a:hover{
+            border:1px solid #000;
+            background-color:#fff
+        }
+
+        .section-title{
+            text-align:center;
+            margin-top:40px;
+            letter-spacing:1px
+        }
+
+        .products{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap:40px;
+            width:90%;
+            margin:40px auto;
+            text-align:center
+        }
+
+        .product{
+            position:relative
+        }
+
+        .product a{
+            display:block
+        }
+
+        .product img{
+            width:100%;
+            height:auto;
+            border:1px solid #000000;
+            transition: transform 0.3s;
+        }
+
+        .product img:hover{
+            transform: scale(1.02);
+        }
+
+        .product h3{
+            font-size:14px;
+            margin-top:10px;
+            letter-spacing:0.5px
+        }
+
+        .product p{
+            font-size:13px;
+            color:#444;
+            margin-top:5px
+        }
+
+        .soldout{
+            background:black;
+            color:white;
+            display:inline-block;
+            padding:3px 8px;
+            font-size:12px;
+            margin-top:5px
+        }
+
+        @media (max-width: 768px) {
+            .main-nav{
+                gap:15px;
+                padding:15px;
+            }
+            .main-nav a{
+                font-size:12px;
+                padding:6px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="sideNav" class="side-nav">
+    <span class="closebtn" onclick="closeNav()">×</span>
+    <a href="SERAPH.html">Home</a>
+    <a href="ACCOUNT.html">Account</a>
+    <a href="CONTACT.html">Contact</a>
+</div>
+
+    <div class="topbar">
+        COMPLIMENTARY (PHL) SHIPPING ON ORDERS WORTH OVER ₱2,000
+    </div>
+
+    <div class="navbar">
+        <div class="menu" onclick="openNav()">☰</div>
+        <div class="logo">SERAPH</div>
+        <div class="icons">
+            <a href="SERAPH.html">
+            <span>🏠</span> </a>
+            <a href="ACCOUNT.html">
+            <span>👤</span></a>
+            <a href="CONTACT.html">
+            <span>📞</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-nav">
+        <a href="SERAPH.html">NEW ARRIVALS</a>
+        <a href="SERAPH.html">TOPS</a>
+        <a href="SERAPH.html">BOTTOMS</a>
+        <a href="SERAPH.html">OUTERWEAR</a>
+        <a href="SERAPH.html">ACCESSORIES</a>
+        <a href="SERAPH.html">SALE</a>
+    </div>
+
+    <h2 class="section-title">NEW ARRIVALS</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <a href="product1.html"><img src="1.webp" alt="Chop Chop Tee"> </a>
+            <h3>CHOP CHOP TEE IN BEDROCK</h3>
+            <p>PHP 970.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product2.html"><img src="2.webp" alt="Needlework Vest"> </a>
+            <h3>NEEDLEWORK VEST IN OLIVE/ANTHRACITE</h3>
+            <p>PHP 1,170.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product3.html"><img src="3.webp" alt="Utility Longsleeve"> </a>
+            <h3>UTILITY LONGSLEEVE TEE IN CHARCOAL GREY</h3>
+            <p>PHP 1,670.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product4.html"><img src="4.webp" alt="Needlework Sweatshirt"> </a>
+            <h3>NEEDLEWORK CUTOFF SWEATSHIRT IN TAIGA</h3>
+            <p>PHP 1,970.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product5.html"><img src="5.webp" alt="Denim Pants"> </a>
+            <div class="soldout">Sold Out</div>
+            <h3>DENIM PANTS IN BLUE</h3>
+            <p>PHP 1,490.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product6.html"><img src="6.webp" alt="Utility Tee"> </a>
+            <h3>UTILITY TEE IN ANTHRACITE</h3>
+            <p>PHP 970.00</p>
+        </div>
+
+    </div>
+
+<script>
+function openNav() {
+    document.getElementById("sideNav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("sideNav").style.width = "0";
+}
+</script>
+
+</body>
+</html>
